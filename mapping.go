@@ -13,5 +13,14 @@ type B struct {
 
 func AssignValues(array []A, values []B) []A {
 	//TODO:: you need to assign B.Val to A.Val2 for the same key value
+	for i, _ := range array {
+		for _, item := range values {
+			if array[i].Key == item.Key {
+				array[i].Val2 = item.Val
+				break
+			}
+		}
+
+	}
 	return array
 }
