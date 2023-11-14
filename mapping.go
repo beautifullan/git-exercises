@@ -12,7 +12,17 @@ type B struct {
 }
 
 func AssignValues(array []A, values []B) []A {
-	//TODO:: you need to assign B.Val to A.Val2 for the same key value
+	valuesMap := make(map[string]string)
+	for _, item := range values {
+		valuesMap[item.Key] = item.Val
+	}
+	for i := range array {
+		array[i].Val2 = valuesMap[array[i].Key]
+	}
+	return array
+}
+
+func version1(array []A, values []B) []A {
 	for i, _ := range array {
 		for _, item := range values {
 			if array[i].Key == item.Key {
