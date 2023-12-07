@@ -7,10 +7,10 @@ import (
 )
 
 func TestFabonacci(t *testing.T) {
-	assert.Equal(t, 1, Fibonacci(0))
+	assert.Equal(t, 0, Fibonacci(0))
 	assert.Equal(t, 1, Fibonacci(1))
-	assert.Equal(t, 2, Fibonacci(2))
-	assert.Equal(t, 3, Fibonacci(3))
-	assert.Equal(t, 5, Fibonacci(4))
-	assert.Equal(t, 89, Fibonacci(10))
+	assert.Equal(t, 1, Fibonacci(2))
+	assert.Equal(t, 2, Fibonacci(3))
+	assert.Equal(t, 3, Fibonacci(4))
+	assert.Equal(t, 55, Fibonacci(10))
 }
